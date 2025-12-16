@@ -4,7 +4,7 @@ metadata:
   name: fortune-cookie-ingress
   namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: / #Em annotations, temos um rewrite-target para que, ao acessar o arquivo ingress.yaml, ele redirecione para a raiz, ou para lugar nenhum, exceto a raiz, endereço do ingress.yaml. Nesse caso, não precisamos colocar /api ou /frontend; ele simplesmente acessará no endereço IP.
 spec:
   rules:
   - host: fortune-cookie.local
